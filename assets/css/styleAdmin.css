@@ -64,7 +64,7 @@ body {
     width: 100%;
     overflow: hidden;
     transition: all 0.4s ease-in-out;
-    background-color: #fafbfe;
+    background-color: #ebebeb;
 }
 
 #sidebar{
@@ -74,7 +74,7 @@ body {
     transition: all 0.4s ease-in-out;
     display: flex;
     flex-direction: column;
-    background-color: #0e223e;
+    background-color: aliceblue;
 }
 
 #sidebar.expand{
@@ -91,14 +91,14 @@ body {
 
 #toggle-btn{
     font-size: 1.5rem;
-    color: #ffffff;
+    color: #060a2f
 }
 .sidebar-logo{
     margin: auto 0;
 }
 
 .sidebar-logo a{
-    color: var(--title-color);
+    color: #060a2f;
     font-size: 1.15rem;
     font-weight: 600;
 }
@@ -114,16 +114,18 @@ body {
 
 a.sidebar-link{
     padding: 0.6rem 1.625rem;
-    color: var(--title-color);
+    color: var(--formal-title-color );
     display: block;
     font-size: 0.9rem;
     white-space:nowrap;
     border-left: 3px solid transparent;
-    transition: background-color .4s;
+    transition: all .4s;
+
 }
 a.sidebar-link i{
     font-size: 1.2rem;
     margin-right: .75rem;
+    color: #060a2f;
 }
 
 a.sidebar-link:hover{
@@ -140,22 +142,22 @@ a.sidebar-link:hover{
     position: absolute;
     top: 0;
     left: 70px;
-    background-color: #0e2238;
+    background-color: aliceblue;
     padding: 0;
     min-width: 15rem;
     display: none;
 }
 
-#sidebar:not(.expand) .sidebar-item:hover+.sidebar-dropdown {
+#sidebar:not(.expand) .sidebar-item:hover .has-dropdown+.sidebar-dropdown {
     display: block;
     max-height: 15em;
     width: 100%;
     opacity: 1;
 }
 
-#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after{
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
     border: solid;
-    border-width: 0 .075rem .075rem  0;
+    border-width: 0 .075rem .075rem 0;
     content: "";
     display: inline-block;
     padding: 2px;
@@ -166,7 +168,49 @@ a.sidebar-link:hover{
     transition: all .2s ease-out;
 }
 
-#sidebar.expand .sidebar-link[data-bs-toggle = "collapse"].collapsed::after{
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
     transform: rotate(45deg);
     transition: all .2s ease-out;
+}
+
+.sidebar-link:hover,.sidebar-link:hover i{
+    color: var(--first-color);
+    transition: color .4s !important;
+}
+
+/* QTUser */
+.btn {
+    min-width: 80px;
+}
+
+.btn-color {
+    background-color: #287baf;
+    color: aliceblue;
+    transition: all .3s;
+}
+
+.btn-color:hover {
+    background-color: aliceblue;
+    border: 1px solid #287baf;
+    color: #287baf;
+    transition: all .3s;
+}
+
+.btn-cl-page {
+    padding: 4px 6px 4px 6px !important;
+    border: 2px solid #cff4fc;
+    color: #287baf;
+}
+
+.btn-cl-page:hover {
+    background-color: #cff4fc;
+    transition: all .25s;
+}
+table tr td:last-child,
+table tr th:last-child{
+    text-align: center;
+}
+input::placeholder{
+    font-style: italic;
+    font-size: 0.9rem;
 }
