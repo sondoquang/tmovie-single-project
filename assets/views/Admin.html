@@ -27,20 +27,20 @@
                 <li class="sidebar-item">
                     <a href="#" class="sidebar-link">
                         <i class="ri-shield-user-line"></i>
-                        <span>Profile</span>
+                        <span>Home</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
                     <a href="#" class="sidebar-link">
                         <i class="ri-list-check-3"></i>
-                        <span>Task</span>
+                        <span>Videos</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
                     <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
                         data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
                         <i class="ri-shield-check-line"></i>
-                        <span>Auth</span>
+                        <span>Users</span>
                     </a>
                     <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                         <li class="sidebar-item">
@@ -55,7 +55,7 @@
                     <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
                         data-bs-target="#multi" aria-expanded="false" aria-controls="multi">
                         <i class="ri-layout-2-line"></i>
-                        <span>Multi Level</span>
+                        <span>Reports</span>
                     </a>
                     <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                         <li class="sidebar-item">
@@ -95,65 +95,109 @@
             </div>
         </aside>
         <div class="main p-2">
-            <div class="container p-5 rounded" style="background-color: aliceblue; height: 100%;">
-                <form method="post">
+            <div class="container p-5 rounded" style="background-color: aliceblue;">
+                <form method="post" id="form">
                     <div class="col-12">
                         <h3 style="text-align:center">FORM DETAIL INFORMATION OF USER</h3>
                     </div>
                     <div class="row ps-5 pe-5">
-                        <div class="col mb-3">
+                        <div class="col mb-3 input-control">
                             <label for="id" class="form-label">ID:</label>
                             <input type="text" class="form-control" id="id" name="id" placeholder="Id automatic">
+                            <div class="error"></div>
                         </div>
-                        <div class="col mb-3">
+                        <div class="col mb-3 input-control">
                             <label for="pwd" class="form-label">Password:</label>
-                            <input type="text" class="form-control" id="pwd" name="password" placeholder="Enter Password">
+                            <input type="text" class="form-control" id="pwd" name="password"
+                                placeholder="Enter Password">
+                            <div class="error"></div>
                         </div>
                     </div>
                     <div class="row ps-5 pe-5">
-                        <div class="col mb-3">
+                        <div class="col mb-3 input-control">
                             <label for="fullname" class="form-label">Fullname:</label>
-                            <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Enter fullmame">
+                            <input type="text" class="form-control" id="fullname" name="fullname"
+                                placeholder="Enter fullmame">
+                            <div class="error"></div>
                         </div>
-                        <div class="col mb-3">
+                        <div class="col mb-3 input-control">
                             <label for="email" class="form-label">Email:</label>
                             <input type="text" class="form-control" id="email" name="email" placeholder="Enter Email">
+                            <div class="error"></div>
                         </div>
                     </div>
                     <div class="row ps-5 pe-5">
                         <div class="col mb -3 d-flex">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" value="" name="admin" id="admin">
+                                <input class="form-check-input" type="radio" value="true" name="admin" id="admin">
                                 <label class="form-check-label" for="admin">
                                     Admin
                                 </label>
                             </div>
                             <div class="form-check ms-3">
-                                <input class="form-check-input" type="radio" value="" name="admin" id="user" checked>
+                                <input class="form-check-input" type="radio" value="false" name="admin" id="user">
                                 <label class="form-check-label" for="user">
                                     User
                                 </label>
                             </div>
                         </div>
+                        <div class="error"></div>
                     </div>
                     <div class="row">
                         <div class="col-12 p-2 " style="text-align: center;">
-                            <button type="button" class="btn btn-color m-1">Create</button>
-                            <button type="button" class="btn btn-color m-1">Insert</button>
-                            <button type="button" class="btn btn-color m-1">Update</button>
-                            <button type="button" class="btn btn-color m-1">Delete</button>
+                            <button type="submit" class="btn btn-color m-1" onclick="submitForm(this)"
+                                value="0">Create</button>
+                            <button type="submit" class="btn btn-color m-1" onclick="submitForm(this)"
+                                value="1">Insert</button>
+                            <button type="submit" class="btn btn-color m-1" value="reset"
+                                onclick="clickReset()">Reset</button>
+                            <button type="submit" class="btn btn-color m-1" formaction="./Detail.html"
+                                onclick="clickDelete(this)" value="delete">Delete</button>
                         </div>
                     </div>
                 </form>
-                <hr>
-                <div class="row">
-                    <div class="input-group p-2 ps-0">
-                        <input type="text" class="form-control-sm w-25 border" placeholder="Search..." aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                          <button class="btn btn-outline-info" type="button">Search</button>
-                        </div>
+                <div class="alert alert-danger d-flex align-items-center p-1" role="alert">
+                    <span class="icon" style="font-size: 1.5rem;"><i class="ri-error-warning-fill"></i> </span>
+                    <div>
+                        An example danger alert with an icon
                     </div>
-                    <table class="table table-bordered">
+                </div>
+                <div class="alert alert-success d-flex align-items-center p-1" role="alert">
+                    <span class="icon" style="font-size: 1.5rem;"><i class="ri-check-double-line"></i></span>
+                    <div>
+                        An example danger alert with an icon
+                    </div>
+                </div>
+                <hr>
+                <div class="row mb-2">
+                    <div class="col-sm-5 d-flex ">
+                        <input type="text" class="form-control-sm w-100 border" placeholder="Search..."
+                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <form method="post" action="">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-info" type="button">Search</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-7">
+                        <form action="./Detail.html" method="post">
+                            <select class="form-select" name="selectOption" aria-label="Default select example"
+                                onchange="this.form.submit()">
+                                <option value="" selected>Open this select menu</option>
+                                <option value="true">Admin</option>
+                                <option value="false">User</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+                <div class="alert alert-success d-flex align-items-center" role="alert" style="display: none !important;">
+                    <i class="ri-error-warning-fill"></i>
+                    <div>
+                        An example success alert with an icon
+                    </div>
+                </div>
+                <div class="row">
+                    <table class="table">
                         <thead>
                             <tr class="table-info">
                                 <th scope="col">#</th>
@@ -170,23 +214,49 @@
                                 <td>Mark</td>
                                 <td>Otto</td>
                                 <td>@mdo</td>
+                                <td class="rtblemail">@mdo</td>
+                                <td><a href=""><i class="ri-edit-2-line"></i></a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
                                 <td>@mdo</td>
+                                <td class="rtblemail">@mdo</td>
+                                <td><a href=""><i class="ri-edit-2-line"></i></a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td class="rtblemail"> @mdo</td>
                                 <td><a href=""><i class="ri-edit-2-line"></i></a></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="row">
-                    <div class="col-12 p-2 " style="text-align: center;">
-                        <button type="button" class="btn btn-cl-page ">1</button>
-                        <button type="button" class="btn btn-cl-page ">2</button>
-                        <button type="button" class="btn btn-cl-page ">3</button>
-                        <button type="button" class="btn btn-cl-page "">4</button>
-                    </div>
+                <div class="row" style=" align-items: center;">
+                    <ul class="pagination col-sm-12">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link " href="#">1</a></li>
+                        <li class="page-item"><a class="page-link " href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link active" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+
                 </div>
                 <div class="alert alert-success" role="alert">
                     A simple success alert—check it out!
-                  </div>
+                </div>
             </div>
         </div>
     </div>

@@ -70,7 +70,7 @@ body {
 #sidebar{
     width: 70px;
     min-width: 70px;
-    z-index: 1000;
+    z-index: 1;
     transition: all 0.4s ease-in-out;
     display: flex;
     flex-direction: column;
@@ -213,4 +213,57 @@ table tr th:last-child{
 input::placeholder{
     font-style: italic;
     font-size: 0.9rem;
+}
+
+.input-control.success input{
+    border: 2px solid#09c372 !important;
+}
+
+.input-control.error input{
+    border: 2px solid #ff3860 !important;
+}
+
+.input-control .error{
+    font-size: 0.8rem;
+    color: #ff3860;
+}
+
+/*========= CSS FOR TABS  =============*/
+.container-tabs{
+    position: relative;
+}
+
+.tab-pane > div{
+    background-color: aliceblue;
+    min-height: 100vh;
+}
+/* Tab-item */
+.tab-item{
+    background-color: #d1e6f6;
+    border-top-left-radius:  0.4rem;
+    border-top-right-radius:  0.4rem;
+    margin-right: 0.2rem;
+}
+.tab-item:hover{
+    cursor: pointer;
+}
+
+/* line */
+div.line{
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    border-radius: 15px;
+    background-color: #333b40;
+    transition: all 0.4s ease;
+}
+
+.active_tab {
+    background-color: #eff8ff;
+}
+
+.active_pane{
+    display: block !important;
 }

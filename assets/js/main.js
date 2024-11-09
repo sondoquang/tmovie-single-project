@@ -3,15 +3,25 @@ const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),
     navClose  = document.getElementById('nav-close');
 
-/*Menu show*/
+/*============ Menu show ============*/
 navToggle.addEventListener('click',()=>{
     navMenu.classList.add('show-menu');
 });
 
-/* Menu hidden */
+/**=========== Menu hidden =========== */
 navClose.addEventListener('click',()=>{
     navMenu.classList.remove('show-menu');
 });
+
+// ============== SIGNIN ==============//
+//  ================================//
+// =========== CLOSE  SIGNIN  =========  //
+const forward_login  = document.getElementById("forward_login"),
+    form__login = document.getElementById("login");
+    forward_login.addEventListener('click',()=>{
+        form__signin.classList.remove("show__signin");
+        form__login.classList.add('show__login');
+    })
 
 
 /*=========== SEARCH ===========*/
@@ -40,20 +50,26 @@ loginBtn.addEventListener('click',()=>{
 });
 
 /*Close Login*/
-/*Show login*/
 loginClose.addEventListener('click',()=>{
     login.classList.remove('show__login');
 }); 
+
+const forward__signin = document.getElementById("forward_sigin"),
+        form__signin = document.getElementById("signin");
+        forward__signin.addEventListener('click',()=>{
+        login.classList.remove('show__login');
+        form__signin.classList.add("show__signin");
+    })
 
 
 /*============= ToggleSubmenu ================*/ 
 function toggleSubmenu (button){
     var list = document.getElementsByClassName('ct__submenu');
-    var i=0;
-    while(i<list.length){
-            list[i].classList.remove('show');
-            i++;
-    }
+    // var i=0;
+    // while(i<list.length){
+    //         list[i].classList.remove('show');
+    //         i++;
+    // }
     button.nextElementSibling.classList.toggle("show");
 };
 
@@ -71,22 +87,4 @@ var btnMenuLeft  = document.getElementById('btnMenuLeft'),
         }
     });
 
-/*========== TOGGLE VIDEO ===========*/ 
-const close = document.querySelector('.close'),
-    popup = document.querySelector('.poup__play__video'),
-    videos = document.querySelectorAll('iframe')
-    close.addEventListener('click', () => {
-        videos.forEach(i => {
-           const source = i.src
-           i.src = ''
-           i.src = source
-        })
-        popup.classList.remove('show__video');
-     })
-
-const open = document.getElementById('play__video');
-     open.addEventListener('click',()=>{
-        console.log(popup);
-        popup.classList.add('show__video');
-     });
-
+    

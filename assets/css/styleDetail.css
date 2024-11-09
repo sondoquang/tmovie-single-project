@@ -9,7 +9,6 @@
 .newsleter input{
     padding: 0.3rem 0.5rem;
     background-color: transparent;
-    border: 1px solid hwb(0 17% 17% / 0.4);
     border-bottom: 2px solid gray;
     border-radius: 6px;
     color: aliceblue;

@@ -85,12 +85,12 @@ img {
 
 .main {
     position: relative;
-    height: 100vh;
-    overflow: initial;
+    /* height: 100vh;
+    overflow: initial; */
 }
 
 .main__bg {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -330,6 +330,10 @@ img {
     opacity: 1;
     pointer-events: initial;
 }
+.show__signin{
+    opacity: 1 !important;
+    pointer-events: initial !important;
+}
 
 .show__login .login__form{
     transform: translateY(0);
@@ -492,7 +496,7 @@ img {
 
 /* ============== body ================ */
 .body__side{
-    padding: 6rem 2rem 1rem 0rem;
+    padding: 6rem 0rem 1rem 0rem;
 }
 
 .left__side{
@@ -718,6 +722,7 @@ img {
 .control{
     display: flex;
     padding: 0.8rem;
+    float: right;
 }
 
 .control_prevs,
@@ -786,7 +791,7 @@ img {
     height: auto;
     bottom: 0;
     padding: 0.05rem 1rem;
-    z-index: 9999;
+    z-index: 1;
     padding-bottom: 0.7rem;
 }
 .movies__content a{
@@ -899,6 +904,10 @@ img {
     .list__v__item{
         justify-content: center;
     }
+
+    #select__sort select{
+        display: none;
+    }
 }
 @media screen and (max-width:576px) {
     .video__item{
@@ -932,6 +941,7 @@ img {
         display: flex;
         justify-items: center;
         margin-left: 6px;
+        padding: 0;
     }
     .wrap__ct__items, .body__side{
         margin-left: 6px;
@@ -1089,3 +1099,77 @@ footer{
     justify-items: center;
     text-align: center;
 }
+
+
+/* SELECT SORT */
+#select__sort select{
+    border: none;
+    color: #fff;
+    background-color: #0b0c20;
+    border:1px solid hsla(230, 75%, 40%, .4);
+}
+
+.btnPage{
+    display: inline-block;
+    width: 45px;
+    text-align: center;
+    margin: 0rem 0.2rem;
+    border:1px solid hsla(230, 75%, 40%, .4);
+    border-radius: 0.2rem;
+}
+
+.btnPage a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    padding: 0.6rem;
+    color: #0eb5df;
+}
+
+/* ================= CSS FOR SIGN IN ================= */
+.signin{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: var(--z-modal);
+    background-color: hsla(230, 75%, 32%, .1);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px); /* for safari */
+    padding: 5rem 1.5rem 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .4s;
+}
+
+.signin__show{
+    opacity: 1;
+    pointer-events: initial ;
+}
+
+.signin__close{
+    position: absolute;
+    top: 1.5rem;
+    left: calc(50% - 12px);
+    font-size: 1.5rem;
+    color: var(--title-color);
+    cursor: pointer;
+}
+
+
+.signin__input{
+    width: 100%;
+    background-color: var(--container-color);
+    border: 2px solid var(--border-color);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: var(--text-color);
+}
+.signin__input::placeholder{
+    color: var(--text-color);   
+    font-size: 0.7rem;
+    font-style: italic;
+}
+
