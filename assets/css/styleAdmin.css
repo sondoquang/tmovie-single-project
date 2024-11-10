@@ -53,6 +53,9 @@ h1 {
 body {
     font-family: 'Poppins', sans-serif;
 }
+label{
+    user-select: none;
+}
     
 
 .wrapper{
@@ -78,8 +81,8 @@ body {
 }
 
 #sidebar.expand{
-    width: 260px;
-    min-width: 260px;
+    width: 200px;
+    min-width: 200px;
 }
 
 #toggle-btn{
@@ -266,4 +269,35 @@ div.line{
 
 .active_pane{
     display: block !important;
+}
+
+/* Css for image user */
+.imageUser img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.card__user{
+    box-shadow:0 .2rem .3rem hsl(230,75%,15%);
+}
+
+.sidebar-item.active{
+    background-color: #287baf;
+    a{
+        color: #fff;
+    }
+    i{
+        color: #fff;
+    }
+}
+
+/* css for  input type  date */
+input[type="date"]{
+    font-size:0.8rem;
+    display: flex;
+    align-items: center;
+}
+input[type="date"]::before{
+    content: attr(placeholder);
 }

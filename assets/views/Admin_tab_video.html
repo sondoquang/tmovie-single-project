@@ -26,20 +26,20 @@
             <ul class="sidebar-nav">
                 <li class="sidebar-item">
                     <a href="#" class="sidebar-link">
-                        <i class="ri-shield-user-line"></i>
+                        <i class="ri-home-8-line"></i>
                         <span>Home</span>
                     </a>
                 </li>
-                <li class="sidebar-item">
+                <li class="sidebar-item active">
                     <a href="#" class="sidebar-link">
-                        <i class="ri-list-check-3"></i>
+                        <i class="ri-folder-video-line"></i>
                         <span>Videos</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
                     <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
                         data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
-                        <i class="ri-shield-check-line"></i>
+                        <i class="ri-shield-user-line"></i>
                         <span>Users</span>
                     </a>
                     <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
@@ -54,7 +54,7 @@
                 <li class="sidebar-item">
                     <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
                         data-bs-target="#multi" aria-expanded="false" aria-controls="multi">
-                        <i class="ri-layout-2-line"></i>
+                        <i class="ri-folder-chart-line"></i>
                         <span>Reports</span>
                     </a>
                     <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
@@ -94,16 +94,42 @@
                 </a>
             </div>
         </aside>
-        <div class="main p-2">
+
+        <!-- CONTROL - TAB-PANES -->
+        <div class="main p-2"> <!-- div bọc cao nhất của main-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 align-content-center p-0"><h3 class="title rounded">Management Videos</h3></div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-3">
+                        <div class="card mb-3 border boder-0 card__user">
+                            <div class="row g-0">
+                              <div class="col-md-9">
+                                <div class="card-body">
+                                    <div class="card-text float-end">Hey <strong>SonDoIt</strong></div> <br>
+                                    <div class="card-text float-end"><small>Admin</small></div>
+                                </div>
+                              </div>
+                              <div class="col-md-3 imageUser p-2">
+                                <a href="#">
+                                    <img src="../images/products/10_small.jpg" class="img-fluid rounded-circle float-end" alt="userImage">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="container p-0 container-tabs">
                 <div class="tabs d-flex">
                     <div class="tab-item active_tab p-2 " ">
-                        <i class=" ri-edit-fill"></i>
-                        User Edition
+                        <i class="ri-video-add-fill"></i>
+                        Video Edition
                     </div>
                     <div class="tab-item p-2">
-                        <i class="ri-file-list-line"></i>
-                        User list
+                        <i class="ri-film-line"></i>
+                        Video List
                     </div>
                 </div>
                 <!-- Line  -->
@@ -116,56 +142,58 @@
                     <div class="container p-5 rounded h-100">
                         <form method="post" id="form">
                             <div class="col-12">
-                                <h3 style="text-align:center">FORM DETAIL INFORMATION OF USER</h3>
+                                <h3 class="text-center pb-4 m-0">FORM DETAIL INFORMATION VIDEO</h3>
                             </div>
                             <div class="row ps-5 pe-5">
-                                <div class="col mb-3 input-control">
-                                    <label for="id" class="form-label">ID:</label>
-                                    <input type="text" class="form-control" id="id" name="id"
-                                        placeholder="Id automatic">
-                                    <div class="error"></div>
+                                <div class="col-sm-4 p-2 pb-3">
+                                    <img src="../images/products/10.jpg" class="rounded img-thumbnail w-100" style="height: 300px; object-fit: cover;" alt="Cinque Terre">
                                 </div>
-                                <div class="col mb-3 input-control">
-                                    <label for="pwd" class="form-label">Password:</label>
-                                    <input type="text" class="form-control" id="pwd" name="password"
-                                        placeholder="Enter Password">
-                                    <div class="error"></div>
-                                </div>
-                            </div>
-                            <div class="row ps-5 pe-5">
-                                <div class="col mb-3 input-control">
-                                    <label for="fullname" class="form-label">Fullname:</label>
-                                    <input type="text" class="form-control" id="fullname" name="fullname"
-                                        placeholder="Enter fullmame">
-                                    <div class="error"></div>
-                                </div>
-                                <div class="col mb-3 input-control">
-                                    <label for="email" class="form-label">Email:</label>
-                                    <input type="text" class="form-control" id="email" name="email"
-                                        placeholder="Enter Email">
-                                    <div class="error"></div>
-                                </div>
-                            </div>
-                            <div class="row ps-5 pe-5">
-                                <div class="col mb -3 d-flex">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" value="true" name="admin"
-                                            id="admin">
-                                        <label class="form-check-label" for="admin">
-                                            Admin
-                                        </label>
+                                <div class="col-sm-8">
+                                    <div class="col mb-3 input-control">
+                                        <label for="id" class="form-label">VIDEO ID:</label>
+                                        <input type="text" class="form-control" id="id" name="id"
+                                            placeholder="Id automatic">
+                                        <div class="error"></div>
                                     </div>
-                                    <div class="form-check ms-3">
-                                        <input class="form-check-input" type="radio" value="false" name="admin"
-                                            id="user">
-                                        <label class="form-check-label" for="user">
-                                            User
-                                        </label>
+                                    <div class="col mb-3 input-control">
+                                        <label for="pwd" class="form-label">VIDEO TITLE:</label>
+                                        <input type="text" class="form-control" id="pwd" name="password"
+                                            placeholder="Enter title video">
+                                        <div class="error"></div>
+                                    </div>
+                                    <div class="col mb-3 input-control">
+                                        <label for="fullname" class="form-label">VIEW COUNT:</label>
+                                        <input type="text" class="form-control" id="fullname" name="fullname"
+                                            placeholder="View count" readonly>
+                                        <div class="error"></div>
+                                    </div>
+                                    <div class="col mb -3 d-flex">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="true" name="admin"
+                                                id="admin">
+                                            <label class="form-check-label" for="admin">
+                                                ACTIVE
+                                            </label>
+                                        </div>
+                                        <div class="form-check ms-3">
+                                            <input class="form-check-input" type="radio" value="false" name="admin"
+                                                id="user">
+                                            <label class="form-check-label" for="user">
+                                                INACTIVE
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="error"></div>
                             </div>
                             <div class="row">
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Enter description" id="floatingTextarea2" style="min-height: 100px"></textarea>
+                                        <label for="floatingTextarea2">Description</label>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
                                 <div class="col-12 p-2 " style="text-align: center;">
                                     <button type="submit" class="btn btn-color m-1" onclick="submitForm(this)"
                                         value="0">Create</button>
@@ -182,10 +210,10 @@
                 </div>
                 <div class="tab-pane">
                     <div class="container p-5 rounded">
-                        <h2 class="pb-2">Danh sách tất cả các người dùng:</h2>
+                        <h2 class="pb-2">Danh sách tất cả các video của hệ thống:</h2>
                         <div class="row mb-2">
                             <div class="col-sm-5 d-flex ">
-                                <input type="text" class="form-control-sm w-100 border" placeholder="Nhập email hoặc tên người dùng"
+                                <input type="text" class="form-control-sm w-100 border" placeholder="Nhập title video bạn muốn"
                                     aria-label="Recipient's username" aria-describedby="basic-addon2">
                                 <form method="post" action="">
                                     <div class="input-group-append">
@@ -197,9 +225,9 @@
                                 <form action="./Detail.html" method="post">
                                     <select class="form-select" name="selectOption" aria-label="Default select example"
                                         onchange="this.form.submit()">
-                                        <option value="" selected>Lọc theo quyền</option>
-                                        <option value="true">Admin</option>
-                                        <option value="false">User</option>
+                                        <option value="" selected>Lọc theo trạng thái</option>
+                                        <option value="true">Active</option>
+                                        <option value="false">Inactive</option>
                                     </select>
                                 </form>
                             </div>
@@ -209,10 +237,10 @@
                                 <thead>
                                     <tr class="table-info">
                                         <th scope="col">#</th>
-                                        <th scope="col">PASSWORD</th>
-                                        <th scope="col">FULLNAME</th>
-                                        <th scope="col">EMAIL</th>
-                                        <th scope="col">ADMIN</th>
+                                        <th scope="col">VIDEO ID</th>
+                                        <th scope="col">VIDEO TITLE</th>
+                                        <th scope="col">VIEW COUNT</th>
+                                        <th scope="col">STATUS</th>
                                         <th scope="col">ACTION</th>
                                     </tr>
                                 </thead>
