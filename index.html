@@ -4,669 +4,324 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="movie" content="trailer film">
-    <meta name="theater" content="action film">
-    <meta name="movie" content="romantic film">
+    <!-- material icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <!-- ==============RemixIcon=================== -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.4.0/remixicon.css">
-    <link rel="stylesheet" href="assets/css/styleIndex.css">
-    <title>TMovies</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=analytics" />
+    <!-- style  css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Admin Response</title>
 </head>
 
 <body>
     <div class="container">
-        <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-            <nav class="nav container">
-                <a href="#" class="nav__logo"><img src="assets/images/logos/logo.png" alt=""></a>
-
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">Home</a>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="#" class="nav__link dropdown__link">Product<i
-                                    class="ri-arrow-down-s-fill dropdown__icon"></i></a>
-                            <ul class="submenu">
-                                <li><a href="#">Product 1</a></li>
-                                <li><a href="#">Product 2</a></li>
-                                <li><a href="#">Product 3</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">About Us</a>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">Featured<i
-                                    class="ri-arrow-down-s-fill dropdown__icon"></i></a>
-                            <ul class="submenu">
-                                <li><a href="#">Services 1</a></li>
-                                <li><a href="#">Services 2</a></li>
-                                <li><a href="#">Services 3</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">Contact Us</a>
-                        </li>
-                    </ul>
-
-                    <!-- Close button -->
-                    <div class="nav__close" id="nav-close">
-                        <i class="ri-close-line"></i>
-                    </div>
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="./assets/images/logo.png" alt="">
+                    <h2>Admin</h2>
                 </div>
-
-                <div class="nav__actions">
-                    <!-- Search button -->
-                    <i class="ri-search-line nav__search" id="search-btn"></i>
-
-                    <!-- Login button -->
-                    <i class="ri-user-line nav__login" id="login-btn"></i>
-
-                    <!-- Toggle button -->
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="ri-menu-line"></i>
-                    </div>
+                <div class="close" id="close-btn">
+                    <i class="ri-close-large-fill"></i>
                 </div>
-            </nav>
-        </header>
+            </div>
+            <div class="sidebar">
+                <a href="" class="text-mute">
+                    <i class="ri-layout-grid-fill"></i>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="" class="active">
+                    <i class="ri-user-3-line"></i>
+                    <h3>Customers</h3>
+                </a>
+                <a href="">
+                    <i class="ri-file-list-3-line"></i>
+                    <h3>Orders</h3>
+                </a>
+                <a href="">
+                    <i class="ri-line-chart-line"></i>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="">
+                    <i class="ri-chat-ai-line"></i>
+                    <h3>message</h3>
+                    <span class="message-count">25</span>
+                </a>
+                <a href="">
+                    <i class="ri-product-hunt-line"></i>
+                    <h3>Products</h3>
+                </a>
+                <a href="">
+                    <i class="ri-file-chart-2-line"></i>
+                    <h3>Reports</h3>
+                </a>
+                <a href="">
+                    <i class="ri-settings-2-line"></i>
+                    <h3>Settings</h3>
+                </a>
+                <a href="">
+                    <i class="ri-add-fill"></i>
+                    <h3>Add Product</h3>
+                </a>
 
-        <!--==================== SEARCH ====================-->
-        <div class="search" id="search">
-            <form action="" class="search__form" method="get">
-                <i class="ri-search-line search__icon"></i>
-                <input type="search" placeholder="Nhập vào tên film bạn muốn..." class="search__input">
-            </form>
-            <i class="ri-close-line search__close" id="search-close"></i>
-        </div>
+                <a href="">
+                    <i class="ri-logout-circle-line"></i>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- ========== End sidebar ============ -->
+        <main>
+            <h1>Dashboard</h1>
 
-        <!--==================== LOGIN ====================-->
-        <div class="login" id="login">
-            <form action="" class="login__form" method="post ">
-                <h2 class="login__title">Log In</h2> 
+            <div class="date">
+                <input type="date">
+            </div>
 
-                <div class="login__group">
-                    <div>
-                        <label for="email" class="login__label">Username</label>
-                        <input type="email" placeholder="Enter your username" id="email" class="login__input">
-                    </div>
-
-                    <div>
-                        <label for="password" class="login__label">Password</label>
-                        <input type="password" placeholder="Enter your password" id="password" class="login__input">
-                    </div>
-                </div>
-
-                <div>
-                    <p class="login__signup">
-                        You do not have an account? <a class="btn" id="forward_sigin">Sign up</a>
-                    </p>
-
-                    <a href="#" class="login__forgot">
-                        You forgot your password
-                    </a>
-
-                    <button type="submit" class="login__button">Log In</button>
-                </div>
-            </form>
-            <i class="ri-close-line login__close" id="login-close"></i>
-        </div>
-         <!--==================== End Login ====================-->
-
-         <!--==================== signin ====================-->
-        <div class="signin" id="signin">
-            <form action="" class="login__form" method="post ">
-                <h2 class="login__title">Sign in</h2>
-
-                <div class="login__group">
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Username">
-                        <label for="floatingInput">Username</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingInput" placeholder="Password">
-                        <label for="floatingInput">Password</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Fullname">
-                        <label for="floatingInput">Fullname</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="Email Address">
-                        <label for="floatingInput">Email Address</label>
-                    </div>
-                </div>
-
-
-                <div >
-                    <p class="login__signup">
-                        You do have an account? <a class="btn" id="forward_login">Login</a>
-                    </p>
-
-                    <button type="submit" class="login__button">Log In</button>
-                </div>
-            </form>
-            <i class="ri-close-line signin__close" id="signin-close"></i>
-        </div>
-         <!--==================== End signin ====================-->
-    </div>
-    <!--==================== MAIN ====================-->
-    <section class="main">
-        <img src="assets/images/backgrounds/body.jpg" alt="image" class="main__bg">
-        <div class="container body__side">
-            <div class="row">
-                <div class="col-sm-3 left__side">
-                    <button class="ctMenuBtn" id="btnMenuLeft" ><h2 id="title__top"><span class="top__10movies">Top 10 Movies</span></h2></button>
-                    <div class="ct_menu " id="categoryMenu">
-                        <ul>
-                            <li class="active"><button type="button" class="btnCTMenu">Home</button></li>
-                            <li class="has_sub"><button onclick="toggleSubmenu(this)" class="dropbtn">Romantic Movies<i
-                                class="ri-arrow-down-s-fill dropdown__icon"></i></button>
-                                <ul class="ct__submenu">
-                                    <div>
-                                        <li class="ct__submenu_item"><a href="" class="ct__submenu_link">Tamil</a></li>
-                                        <li class="ct__submenu_item"><a href="" class="ct__submenu_link">China</a></li>
-                                        <li class="ct__submenu_item"><a href="" class="ct__submenu_link">English</a></li>
-                                    </div>
-                                </ul>
-                            </li>
-                            <li class="has_sub"><button onclick="toggleSubmenu(this)" class="dropbtn">Top 10 Movies<i
-                                class="ri-arrow-down-s-fill dropdown__icon"></i></button>
-                                <ul class="ct__submenu">
-                                    <div>
-                                        <li class="ct__submenu_item"><a href="" class="ct__submenu_link">Tamil</a></li>
-                                        <li class="ct__submenu_item"><a href="" class="ct__submenu_link">China</a></li>
-                                        <li class="ct__submenu_item"><a href="" class="ct__submenu_link">English</a></li>
-                                    </div>
-                                </ul>
-                            </li>
-                            <li class="has_sub"><button onclick="toggleSubmenu(this)" class="dropbtn">Rating Movies<i
-                                class="ri-arrow-down-s-fill dropdown__icon"></i></button>
-                                <ul class="ct__submenu">
-                                    <div>
-                                        <li class="ct__submenu_item"><a href="" class="ct__submenu_link">Tamil</a></li>
-                                        <li class="ct__submenu_item"><a href="" class="ct__submenu_link">China</a></li>
-                                        <li class="ct__submenu_item"><a href="" class="ct__submenu_link">English</a></li>
-                                    </div>
-                                </ul>
-                            </li>
-                            <li><button type="button" class="btnCTMenu">New Movies</button></li>
-                            <li><button type="button" class="btnCTMenu">TV Seris</button></li>
-                            <li><button type="button" class="btnCTMenu">China Movies</button></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-9 right__side">
-                    <div class="right_side_v1">
-                        <img src="assets/images/banners/1.jpg" alt="banner_first" class="banner__film" width="100%">
-                        <div class="container content">
-                            <p class="title">Rebort Action Story 5</p>
-                            <div class="cat">
-                                <ul>
-                                    <li>
-                                        <span>Category : </span>
-                                        <span class="name">"English movies - 2019"</span>
-                                    </li>
-                                    <li>
-                                        <span>Genre : </span>
-                                        <span>Action, Drama</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="play__btn">
-                                <a href="#" class="video_btn" style="cursor: poiter;">
-                                    <img src="assets/images/logos/play-button.png" alt="play">
-                                    <span>Play Trailer</span>
-                                </a>
+            <!-- Start  sales -->
+            <div class="insights">
+                <div class="sales">
+                    <i class="ri-pie-chart-line"></i>
+                    <div class="middle">
+                        <div class="lef">
+                            <h3>Total Sales</h3>
+                            <h1>$25.10</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>81%</p>
                             </div>
                         </div>
                     </div>
+                    <small class="text-mute">
+                        Last 24 hours
+                    </small>
                 </div>
-            </div>
-        </div>
-    </section>
-    <div class="tmoves_new__arrivals">
-        <div class="container">
-            <div class="row tmoves_hadding">
-                <h2>
-                    <span class="col-lg-3 col-md-6 text-uppercase">Suggested movies</span>
-                    <div class="col-lg-6 d-flex" id="select__sort">
-                        <select class="form-select" aria-label="Default select example" style="width: 40%;">
-                            <option selected>Sort by</option>
-                            <option value="1">Title</option>
-                            <option value="2">View count</option>
-                            <option value="3">Price</option>
-                        </select>
-                        <select class="form-select ms-2" aria-label="Default select example" style="width: 40%;">
-                            <option selected>Show</option>
-                            <option value="1">15</option>
-                            <option value="2">25</option>
-                            <option value="3">50</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-3 col-md-6 control">
-                        <div class="btnPage"><a href=""><i class="ri-arrow-left-s-line"></i></a></div>
-                        <div class="btnPage"><a href="">1</a></div>
-                        <div class="btnPage"><a href="">2</a></div>
-                        <div class="btnPage"><a href="">3</a></div>
-                        <div class="btnPage"><a href=""><i class="ri-arrow-right-s-line"></i></a></div>
-                    </div>
-                    
-                </h2>
-                
-                <span class="border-bottom"></span>
-            </div>
-            <div class="row list__v__item">
-                <div class="col-sm-12 col-lg-3 video__item gradient">
-                    <img src="assets/images/products/1.jpg" alt="film">
-                    <div class="movies__content">
-                        <a href="">The Four Realms Happy Nutcracker</a>
-                        <div class="v__tag">Romance, English, 2019</div>
-                        <div class="v__bottom">
-                            <div class="v__time"><i class="ri-time-line"></i><span>2 Hr 3 Min</span></div>
-                            <div class="likle_icon"><a href=""><i class="ri-heart-line"></i></a></div>
+
+                <div class="expenses">
+                    <i class="ri-bar-chart-box-line"></i>
+                    <div class="middle">
+                        <div class="lef">
+                            <h3>Total Sales</h3>
+                            <h1>$25.10</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>81%</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="playbtn">
-                        <a href=""><img src="assets/images/logos/play-button.png" alt="" ></a>
+                    <small class="text-mute">
+                        Last 24 hours
+                    </small>
+                </div>
+                <div class="income">
+                    <i class="ri-bar-chart-fill"></i>
+                    <div class="middle">
+                        <div class="lef">
+                            <h3>Total Sales</h3>
+                            <h1>$25.10</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>81%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-mute">
+                        Last 24 hours
+                    </small>
+                </div>
+            </div>
+            <!-- end of insights -->
+            <div class="recent-orders">
+                <h2>Recent Order</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product name</th>
+                            <th>Product number</th>
+                            <th>Payment</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Iphone 15</td>
+                            <td>10</td>
+                            <td>COD</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Iphone 15</td>
+                            <td>10</td>
+                            <td>COD</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Iphone 15</td>
+                            <td>10</td>
+                            <td>COD</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Iphone 15</td>
+                            <td>10</td>
+                            <td>COD</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Iphone 15</td>
+                            <td>10</td>
+                            <td>COD</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Iphone 15</td>
+                            <td>10</td>
+                            <td>COD</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Iphone 15</td>
+                            <td>10</td>
+                            <td>COD</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="">Show all</a>
+            </div>
+        </main>
+
+        <!-- End of  main  -->
+
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <i class="ri-menu-fill"></i>
+                </button>
+                <div class="theme-toggler">
+                    <i class="ri-sun-fill active"></i>
+                    <i class="ri-moon-fill"></i>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey <b>Slang</b></p>
+                        <small class="text-mute">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="./assets/images/profile-1.jpg" alt="photo">
+                    </div>
+                </div>
+            </div>
+            <!-- end of top -->
+            <div class="recent-updates">
+                <h2>Recent Update</h2>
+                <div class="updates">
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="./assets/images/profile-1.jpg" alt="photo">
+                        </div>
+                        <div class="message">
+                            <p><b>Jony Tri Nguyen</b> check for update</p>
+                            <small class="text-mute">2 Minutes Ago </small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="./assets/images/profile-2.jpg" alt="photo">
+                        </div>
+                        <div class="message">
+                            <p><b>Jony Tri Nguyen</b> check for update</p>
+                            <small class="text-mute">2 Minutes Ago </small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="./assets/images/profile-3.jpg" alt="photo">
+                        </div>
+                        <div class="message">
+                            <p><b>Jony Tri Nguyen</b> check for update</p>
+                            <small class="text-mute">2 Minutes Ago </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of recent updates -->
+
+            <div class="sales-analytics">
+                <h2>Sale analytics</h2>
+                <div class="item online">
+                    <div class="icon">
+                        <i class="ri-shopping-cart-fill"></i>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>ONLINE ORDERS</h3>
+                            <small class="text-mute">Last 24 hours</small>
+                        </div>
+                        <h5 class="success">+39%</h5>
+                        <h3>3456</h3>
                     </div>
                 </div>
 
-                <div class="col-sm-12 col-lg-3 video__item gradient">
-                    <img src="assets/images/products/2.jpg" alt="film">
-                    <div class="movies__content">
-                        <a href="">The Four Realms Happy Nutcracker</a>
-                        <div class="v__tag">Romance, English, 2019</div>
-                        <div class="v__bottom">
-                            <div class="v__time"><i class="ri-time-line"></i><span>2 Hr 3 Min</span></div>
-                            <div class="likle_icon"><a href=""><i class="ri-heart-line"></i></a></div>
-                        </div>
+                <div class="item offline">
+                    <div class="icon">
+                        <i class="ri-shopping-bag-fill"></i>
                     </div>
-                    <div class="playbtn">
-                        <a href="#"><img src="assets/images/logos/play-button.png" alt="" ></a>
+                    <div class="right">
+                        <div class="info">
+                            <h3>OFFLINE ORDERS</h3>
+                            <small class="text-mute">Last 24 hours</small>
+                        </div>
+                        <h5 class="success">+39%</h5>
+                        <h3>3456</h3>
                     </div>
                 </div>
-                <div class="col-sm-12 col-lg-3 video__item gradient">
-                    <img src="assets/images/products/3.jpg" alt="film">
-                    <div class="movies__content">
-                        <a href="">The Four Realms Happy Nutcracker</a>
-                        <div class="v__tag">Romance, English, 2019</div>
-                        <div class="v__bottom">
-                            <div class="v__time"><i class="ri-time-line"></i><span>2 Hr 3 Min</span></div>
-                            <div class="likle_icon"><a href=""><i class="ri-heart-line"></i></a></div>
-                        </div>
+
+                <div class="item customers">
+                    <div class="icon">
+                        <i class="ri-shopping-cart-fill"></i>
                     </div>
-                    <div class="playbtn">
-                        <a href=""><img src="assets/images/logos/play-button.png" alt="" ></a>
+                    <div class="right">
+                        <div class="info">
+                            <h3>NEW CUSTOMER</h3>
+                            <small class="text-mute">Last 24 hours</small>
+                        </div>
+                        <h5 class="success">+39%</h5>
+                        <h3>3456</h3>
                     </div>
                 </div>
-                <div class="col-sm-12 col-lg-3 video__item gradient">
-                    <img src="assets/images/products/4.jpg" alt="film">
-                    <div class="movies__content">
-                        <a href="">The Four Realms Happy Nutcracker</a>
-                        <div class="v__tag">Romance, English, 2019</div>
-                        <div class="v__bottom">
-                            <div class="v__time"><i class="ri-time-line"></i><span>2 Hr 3 Min</span></div>
-                            <div class="likle_icon"><a href=""><i class="ri-heart-line"></i></a></div>
-                        </div>
-                    </div>
-                    <div class="playbtn">
-                        <a href=""><img src="assets/images/logos/play-button.png" alt="" ></a>
+
+                <div class="item add-product">
+                    <div>
+                        <i class="ri-add-fill"></i>
+                        <h3>Add product</h3>
                     </div>
                 </div>
-                <div class="col-sm-12 col-lg-3 video__item gradient">
-                    <img src="assets/images/products/5.jpg" alt="film">
-                    <div class="movies__content">
-                        <a href="">The Four Realms Happy Nutcracker</a>
-                        <div class="v__tag">Romance, English, 2019</div>
-                        <div class="v__bottom">
-                            <div class="v__time"><i class="ri-time-line"></i><span>2 Hr 3 Min</span></div>
-                            <div class="likle_icon"><a href=""><i class="ri-heart-line"></i></a></div>
-                        </div>
-                    </div>
-                    <div class="playbtn">
-                        <a href=""><img src="assets/images/logos/play-button.png" alt="" ></a>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-lg-3 video__item gradient">
-                    <img src="assets/images/products/6.jpg" alt="film">
-                    <div class="movies__content">
-                        <a href="">The Four Realms Happy Nutcracker</a>
-                        <div class="v__tag">Romance, English, 2019</div>
-                        <div class="v__bottom">
-                            <div class="v__time"><i class="ri-time-line"></i><span>2 Hr 3 Min</span></div>
-                            <div class="likle_icon"><a href=""><i class="ri-heart-line"></i></a></div>
-                        </div>
-                    </div>
-                    <div class="playbtn">
-                        <a href=""><img src="assets/images/logos/play-button.png" alt="" ></a>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-lg-3 video__item gradient">
-                    <img src="assets/images/products/7.jpg" alt="film">
-                    <div class="movies__content">
-                        <a href="">The Four Realms Happy Nutcracker</a>
-                        <div class="v__tag">Romance, English, 2019</div>
-                        <div class="v__bottom">
-                            <div class="v__time"><i class="ri-time-line"></i><span>2 Hr 3 Min</span></div>
-                            <div class="likle_icon"><a href=""><i class="ri-heart-line"></i></a></div>
-                        </div>
-                    </div>
-                    <div class="playbtn">
-                        <a href=""><img src="assets/images/logos/play-button.png" alt="" ></a>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-lg-3 video__item gradient">
-                    <img src="assets/images/products/8.jpg" alt="film">
-                    <div class="movies__content">
-                        <a href="">The Four Realms Happy Nutcracker</a>
-                        <div class="v__tag">Romance, English, 2019</div>
-                        <div class="v__bottom">
-                            <div class="v__time"><i class="ri-time-line"></i><span>2 Hr 3 Min</span></div>
-                            <div class="likle_icon"><a href=""><i class="ri-heart-line"></i></a></div>
-                        </div>
-                    </div>
-                    <div class="playbtn">
-                        <a href=""><img src="assets/images/logos/play-button.png" alt="" ></a>
-                    </div>
-                </div>
-                
             </div>
         </div>
     </div>
-    <div class="container wrap__ct__items">
-        <div class="row tmoves_hadding">
-            <h2>
-                <span class="col-sm-3 text-uppercase">Suggested movies</span>
-                <div class="col-sm-6 d-flex" id="select__sort">
-                    <select class="form-select" aria-label="Default select example" style="width: 40%;">
-                        <option selected>Sort by</option>
-                        <option value="1">Title</option>
-                        <option value="2">View count</option>
-                        <option value="3">Price</option>
-                    </select>
-                    <select class="form-select ms-2" aria-label="Default select example" style="width: 40%;">
-                        <option selected>Show</option>
-                        <option value="1">15</option>
-                        <option value="2">25</option>
-                        <option value="3">50</option>
-                    </select>
-                </div>
-                <div class="col-sm-3 control">
-                    <div class="btnPage"><a href=""><i class="ri-arrow-left-s-line"></i></a></div>
-                    <div class="btnPage"><a href="">1</a></div>
-                    <div class="btnPage"><a href="">2</a></div>
-                    <div class="btnPage"><a href="">3</a></div>
-                    <div class="btnPage"><a href=""><i class="ri-arrow-right-s-line"></i></a></div>
-                </div>
-                
-            </h2>
-            
-            <span class="border-bottom"></span>
-        </div>
-            <div class="row list_items">
-                <div class="col-xl-3 col-lg-4 col-sm-6 mt-3 suggested__item">
-                    <div class="wrap__item">
-                        <div class="item__image"><img src="assets/images/products/2_small.jpg" alt=""></div>
-                        <div class="item__content">
-                            <div class="ct"><span>English</span> </div>
-                            <a href="#">The Happy Nutcracker</a>
-                            <div class="duration__time"><i class="ri-time-line"></i><span>2 Hr 32 Mn</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 mt-3 suggested__item">
-                    <div class="wrap__item">
-                        <div class="item__image"><img src="assets/images/products/3_small.jpg" alt=""></div>
-                        <div class="item__content">
-                            <div class="ct"><span>English</span> </div>
-                            <a href="#">The Happy Nutcracker</a>
-                            <div class="duration__time"><i class="ri-time-line"></i><span>2 Hr 32 Mn</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 mt-3 suggested__item">
-                    <div class="wrap__item">
-                        <div class="item__image"><img src="assets/images/products/4_small.jpg" alt=""></div>
-                        <div class="item__content">
-                            <div class="ct"><span>English</span> </div>
-                            <a href="#">The Happy Nutcracker</a>
-                            <div class="duration__time"><i class="ri-time-line"></i><span>2 Hr 32 Mn</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 mt-3 suggested__item">
-                    <div class="wrap__item">
-                        <div class="item__image"><img src="assets/images/products/5_small.jpg" alt=""></div>
-                        <div class="item__content">
-                            <div class="ct"><span>English</span> </div>
-                            <a href="#">The Happy Nutcracker</a>
-                            <div class="duration__time"><i class="ri-time-line"></i><span>2 Hr 32 Mn</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 mt-3 suggested__item">
-                    <div class="wrap__item">
-                        <div class="item__image"><img src="assets/images/backgrounds/bg-image.png" alt=""></div>
-                        <div class="item__content">
-                            <div class="ct"><span>English</span> </div>
-                            <a href="#">The Happy Nutcracker</a>
-                            <div class="duration__time"><i class="ri-time-line"></i><span>2 Hr 32 Mn</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 mt-3 suggested__item">
-                    <div class="wrap__item">
-                        <div class="item__image"><img src="assets/images/products/9_small.jpg" alt=""></div>
-                        <div class="item__content">
-                            <div class="ct"><span>English</span> </div>
-                            <a href="#">The Happy Nutcracker</a>
-                            <div class="duration__time"><i class="ri-time-line"></i><span>2 Hr 32 Mn</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6  mt-3 suggested__item">
-                    <div class="wrap__item">
-                        <div class="item__image"><img src="assets/images/products/10_small.jpg" alt=""></div>
-                        <div class="item__content">
-                            <div class="ct"><span>English</span> </div>
-                            <a href="#">The Happy Nutcracker</a>
-                            <div class="duration__time"><i class="ri-time-line"></i><span>2 Hr 32 Mn</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 mt-3 suggested__item">
-                    <div class="wrap__item">
-                        <div class="item__image"><img src="assets/images/products/11_small.jpg" alt=""></div>
-                        <div class="item__content">
-                            <div class="ct"><span>English</span> </div>
-                            <a href="#">The Happy Nutcracker</a>
-                            <div class="duration__time"><i class="ri-time-line"></i><span>2 Hr 32 Mn</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 mt-3 suggested__item">
-                    <div class="wrap__item">
-                        <div class="item__image"><img src="assets/images/products/2_small.jpg" alt=""></div>
-                        <div class="item__content">
-                            <div class="ct"><span>English</span> </div>
-                            <a href="#">The Happy Nutcracker</a>
-                            <div class="duration__time"><i class="ri-time-line"></i><span>2 Hr 32 Mn</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 mt-3 suggested__item">
-                    <div class="wrap__item">
-                        <div class="item__image"><img src="assets/images/products/3_small.jpg" alt=""></div>
-                        <div class="item__content">
-                            <div class="ct"><span>English</span> </div>
-                            <a href="#">The Happy Nutcracker</a>
-                            <div class="duration__time"><i class="ri-time-line"></i><span>2 Hr 32 Mn</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 mt-3suggested__item">
-                    <div class="wrap__item">
-                        <div class="item__image"><img src="assets/images/products/4_small.jpg" alt=""></div>
-                        <div class="item__content">
-                            <div class="ct"><span>English</span> </div>
-                            <a href="#">The Happy Nutcracker</a>
-                            <div class="duration__time"><i class="ri-time-line"></i><span>2 Hr 32 Mn</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 mt-3 suggested__item">
-                    <div class="wrap__item">
-                        <div class="item__image"><img src="assets/images/products/5_small.jpg" alt=""></div>
-                        <div class="item__content">
-                            <div class="ct"><span>English</span> </div>
-                            <a href="#">The Happy Nutcracker</a>
-                            <div class="duration__time"><i class="ri-time-line"></i><span>2 Hr 32 Mn</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 mt-3 suggested__item">
-                    <div class="wrap__item">
-                        <div class="item__image"><img src="assets/images/products/6_small.jpg" alt=""></div>
-                        <div class="item__content">
-                            <div class="ct"><span>English</span> </div>
-                            <a href="#">The Happy Nutcracker</a>
-                            <div class="duration__time"><i class="ri-time-line"></i><span>2 Hr 32 Mn</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 mt-3 suggested__item">
-                    <div class="wrap__item">
-                        <div class="item__image"><img src="assets/images/products/9_small.jpg" alt=""></div>
-                        <div class="item__content">
-                            <div class="ct"><span>English</span> </div>
-                            <a href="#">The Happy Nutcracker</a>
-                            <div class="duration__time"><i class="ri-time-line"></i><span>2 Hr 32 Mn</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 mt-3 suggested__item">
-                    <div class="wrap__item">
-                        <div class="item__image"><img src="assets/images/products/10_small.jpg" alt=""></div>
-                        <div class="item__content">
-                            <div class="ct"><span>English</span> </div>
-                            <a href="#">The Happy Nutcracker</a>
-                            <div class="duration__time"><i class="ri-time-line"></i><span>2 Hr 32 Mn</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 mt-3 suggested__item">
-                    <div class="wrap__item">
-                        <div class="item__image"><img src="assets/images/products/11_small.jpg" alt=""></div>
-                        <div class="item__content">
-                            <div class="ct"><span>English</span> </div>
-                            <a href="#">The Happy Nutcracker</a>
-                            <div class="duration__time"><i class="ri-time-line"></i><span>2 Hr 32 Mn</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </div>
-    <footer>
-        <div class="contanter" >
-            <div class="footer__top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6 col-lg-3">
-                            <img src="assets/images/footers/1.jpg" alt="footer">
-                        </div>
-                        <div class="col-sm-6 col-lg-3">
-                            <img src="assets/images/footers/2.jpg" alt="footer">
-                        </div>
-                        <div class="col-sm-6 col-lg-3">
-                            <img src="assets/images/footers/3.jpg" alt="footer">
-                        </div>
-                        <div class="col-sm-6 col-lg-3">
-                            <img src="assets/images/footers/4.jpg" alt="footer">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer__center">
-                <div class="container">
-                    <div class="row">
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="footer__title"><h2>Movies Categgory</h2></div>
-                        <div class="footer__content">
-                            <ul>
-                                <li><a href="">Movies</a></li>
-                                <li><a href="">Videos</a></li>
-                                <li><a href="">English Movies</a></li>
-                                <li><a href="">China Movies</a></li>
-                                <li><a href="">Trailer</a></li>
-                                <li><a href="">Upcoming Movies</a></li>
-                                <li><a href="">Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="footer__title"><h2>Information</h2></div>
-                        <div class="footer__content">
-                            <ul>
-                                <li><a href="">Abount Us</a></li>
-                                <li><a href="">Song</a></li>
-                                <li><a href="">Forums</a></li>
-                                <li><a href="">Place</a></li>
-                                <li><a href="">Hot collection</a></li>
-                                <li><a href="">Upcoming events</a></li>
-                                <li><a href="">All movies</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="footer__title"><h2>Locations</h2></div>
-                        <div class="footer__content">
-                            <ul>
-                                <li><a href="">South Korea</a></li>
-                                <li><a href="">German</a></li>
-                                <li><a href="">English Movies</a></li>
-                                <li><a href="">China Movies</a></li>
-                                <li><a href="">Trailer</a></li>
-                                <li><a href="">Upcoming Movies</a></li>
-                                <li><a href="">Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="footer__title"><h2>Newsleter</h2></div>
-                        <div class="footer__content">
-                            <p>Nếu bạn muốn nhận thông tin mới nhanh nhất và cập nhật mỗi
-                                 ngày từ công ty chúng tôi bạn chỉ cần đăng kí tin tức bằng 
-                                email mà không hề mất phí.</p>
-                             <div class="newsleter">
-                                <input type="text" name="newsleter" id="newsleter" placeholder="Enter Address Email....">
-                                <form method="post">
-                                    <span class="send__email"><i class="ri-send-plane-fill"></i></span>
-                                </form>
-                             </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-        <div class="coby">
-        <div class="container">
-            <span>CopyRight 2019 Develop by SonDoIt. All Rights Reserved.</span>
-        </div>
-    </div>
-    </footer>
-    <!--=============== MAIN JS ===============-->
-    <script src="assets/js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/index.js"></script>
 </body>
+
 </html>
